@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Encuesta de Satisfacción</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+	<body>
+		<form action = "send.php" method = "post" autocomplete="off">
+			<div class="form">
+				<div class="head">
+					<a href = "https://yellowpath.mx/" target = "_blank" class="logo"></a>
+				</div>
+				<h1 class = "titles" id = "head-title">Encuesta de satisfacción</h1>
+
+				<input id="one" type="radio" name="stage" checked="checked" class = "stage-selector"/>
+				<input id="two" type="radio" name="stage" class = "stage-selector"/>
+				<input id="three" type="radio" name="stage" class = "stage-selector"/>
+				<input id="four" type="radio" name="stage" class = "stage-selector"/>
+				<input id="five" type="radio" name="stage" class = "stage-selector"/>
+				<input id="six" type="radio" name="stage" class = "stage-selector"/>
+
+			
+				<div class="panels">
+					<div data-panel="one" class = "slides">
+						<div class="wrapper">
+							<div class="row titles">
+								<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+									<h1>Pregunta 1:</h1>
+									<h2>¿Qué tan satisfecho está con el tiempo de respuesta?</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-sm-12 enc_holder">
+									<a href="#" onclick = "ansChange(1,1)">
+										<label for="a_a">
+											<div class="col-md-2 col-sm-4-ans ans ans_1" id = "ans_a_1"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(1,2)">
+										<label for="a_b">
+											<div class="col-md-2 col-sm-4-ans ans ans_2" id = "ans_a_2"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(1,3)">
+										<label for="a_c">
+											<div class="col-md-2 col-sm-4-ans ans ans_3" id = "ans_a_3"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(1,4)">
+										<label for="a_d">
+											<div class="col-md-2 col-sm-4-ans ans ans_4" id = "ans_a_4"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(1,5)">
+										<label for="a_e">
+											<div class="col-md-2 col-sm-4-ans ans ans_5" id = "ans_a_5"></div>
+										</label>
+									</a>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn btn_disabled prev" disabled>Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "button" class = "btn next">Siguiente</button>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-8">
+									<input type="radio" name = "q_1" id = "a_a" value = "1" unchecked required>
+									<input type="radio" name = "q_1" id = "a_b" value = "2" unchecked>
+									<input type="radio" name = "q_1" id = "a_c" value = "3" unchecked>
+									<input type="radio" name = "q_1" id = "a_d" value = "4" unchecked>
+									<input type="radio" name = "q_1" id = "a_e" value = "5" unchecked>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-panel="two" class = "slides">
+						<div class="wrapper">
+							<div class="row titles">
+								<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+									<h1>Pregunta 2:</h1>
+									<h2>¿Qué tan satisfecho está con la descripción de los conceptos?</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-sm-12 enc_holder">
+									<a href="#" onclick = "ansChange(2,1)">
+										<label for="b_a">
+											<div class="col-md-2 col-sm-4-ans ans ans_1" id = "ans_b_1"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(2,2)">
+										<label for="b_b">
+											<div class="col-md-2 col-sm-4-ans ans ans_2" id = "ans_b_2"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(2,3)">
+										<label for="b_c">
+											<div class="col-md-2 col-sm-4-ans ans ans_3" id = "ans_b_3"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(2,4)">
+										<label for="b_d">
+											<div class="col-md-2 col-sm-4-ans ans ans_4" id = "ans_b_4"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(2,5)">
+										<label for="b_e">
+											<div class="col-md-2 col-sm-4-ans ans ans_5" id = "ans_b_5"></div>
+										</label>
+									</a>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn prev">Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "button" class = "btn next">Siguiente</button>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-8">
+									<input type="radio" name = "q_2" id = "b_a" value = "1" unchecked required>
+									<input type="radio" name = "q_2" id = "b_b" value = "2" unchecked>
+									<input type="radio" name = "q_2" id = "b_c" value = "3" unchecked>
+									<input type="radio" name = "q_2" id = "b_d" value = "4" unchecked>
+									<input type="radio" name = "q_2" id = "b_e" value = "5" unchecked>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-panel="three" class = "slides">
+						<div class="wrapper">
+							<div class="row titles">
+								<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+									<h1>Pregunta 3:</h1>
+									<h2>¿Qué tan satisfecho está con el servicio y la atención que se le brindó?</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-sm-12 enc_holder">
+									<a href="#" onclick = "ansChange(3,1)">
+										<label for="c_a">
+											<div class="col-md-2 col-sm-4-ans ans ans_1" id = "ans_c_1"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(3,2)">
+										<label for="c_b">
+											<div class="col-md-2 col-sm-4-ans ans ans_2" id = "ans_c_2"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(3,3)">
+										<label for="c_c">
+											<div class="col-md-2 col-sm-4-ans ans ans_3" id = "ans_c_3"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(3,4)">
+										<label for="c_d">
+											<div class="col-md-2 col-sm-4-ans ans ans_4" id = "ans_c_4"></div>
+										</label>
+									</a><a href="#" onclick = "ansChange(3,5)">
+										<label for="c_e">
+											<div class="col-md-2 col-sm-4-ans ans ans_5" id = "ans_c_5"></div>
+										</label>
+									</a>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn prev">Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "button" class = "btn next">Siguiente</button>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-8">
+									<input type="radio" name = "q_3" id = "c_a" value = "1" unchecked required>
+									<input type="radio" name = "q_3" id = "c_b" value = "2" unchecked>
+									<input type="radio" name = "q_3" id = "c_c" value = "3" unchecked>
+									<input type="radio" name = "q_3" id = "c_d" value = "4" unchecked>
+									<input type="radio" name = "q_3" id = "c_e" value = "5" unchecked>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-panel="four" class = "slides">
+						<div class="wrapper">
+							<div class="row titles">
+								<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+									<h1>Pregunta 4:</h1>
+									<h2>¿Qué tan satisfecho está con la propuesta económica?</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-sm-12 enc_holder">
+									<a href="#" class = "ans_a" onclick = "ansChange(4,1)">
+										<label for="d_a">
+											<div class="col-md-2 col-sm-4-ans ans ans_1" id = "ans_d_1"></div>
+										</label>
+									</a><a href="#" class = "ans_b" onclick = "ansChange(4,2)">
+										<label for="d_b">
+											<div class="col-md-2 col-sm-4-ans ans ans_2" id = "ans_d_2"></div>
+										</label>
+									</a><a href="#" class = "ans_c" onclick = "ansChange(4,3)">
+										<label for="d_c">
+											<div class="col-md-2 col-sm-4-ans ans ans_3" id = "ans_d_3"></div>
+										</label>
+									</a><a href="#" class = "ans_d" onclick = "ansChange(4,4)">
+										<label for="d_d">
+											<div class="col-md-2 col-sm-4-ans ans ans_4" id = "ans_d_4"></div>
+										</label>
+									</a><a href="#" class = "ans_e" onclick = "ansChange(4,5)">
+										<label for="d_e">
+											<div class="col-md-2 col-sm-4-ans ans ans_5" id = "ans_d_5"></div>
+										</label>
+									</a>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn prev">Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "button" class = "btn next">Siguiente</button>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-8">
+									<input type="radio" name = "q_4" id = "d_a" value = "1" unchecked required>
+									<input type="radio" name = "q_4" id = "d_b" value = "2" unchecked>
+									<input type="radio" name = "q_4" id = "d_c" value = "3" unchecked>
+									<input type="radio" name = "q_4" id = "d_d" value = "4" unchecked>
+									<input type="radio" name = "q_4" id = "d_e" value = "5" unchecked>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-panel="five" class = "slides">
+						<div class="wrapper">
+							<div class="row titles text-center">
+								<h1>Pregunta 5:</h1>
+
+								<div class="col-md-6 col-md-offset-3 col-sm-12" id = "last_q">
+									<h2>¿Cuál fue el motivo por el cuál se decidió no colaborar con YellowPath o trabajar con otra agencia / freelance?:</h2>
+									<textarea type="text" name = "ansRzn" minlength="5" id = "ansRzn" required rows = "7" class = "data" placeholder = "Su respuesta"></textarea>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn prev">Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "button" class = "btn next">Siguiente</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-panel="six" class = "slides">
+						<div class="wrapper">
+							<div class="row titles">
+								<h1>Tus datos:</h1>
+
+								<div class="col-md-6 col-md-offset-3 col-sm-12" id = "data_holder">
+									<h2>Nombre:</h2>
+									<input type="text" name = "inputName" id = "inputName" required class = "data" placeholder = "Nombre">
+									<h2>Marca:</h2>
+									<input type="text" name = "inputBrand" id = "inputBrand" required class = "data" placeholder = "Marca">
+									<h2>Servicio que se cotizó:</h2>
+									<input type="text" name = "inputService" id = "inputService" required class = "data" placeholder = "Servicio">
+									<input type="checkbox" id = "validateCheck" name = "validateCheck" required>
+								</div>
+							</div>
+							<div class="clean"></div>
+							<div class="row" id = "button_cont">
+								<div class="col-md-3 col-sm-4" id = "btn_bfr">
+									<button type = "button" class = "btn prev">Anterior</button>
+								</div>
+								<div class="col-md-3 col-md-offset-6 col-sm-4 col-sm-offset-4" id = "btn_nxt">
+									<button type = "submit" class = "btn next" onclick = "validate()">Enviar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="stages">
+					<label for="one" id = "select_1">1</label>
+					<label for="two" id = "select_2">2</label>
+					<label for="three" id = "select_3">3</label>
+					<label for="four" id = "select_4">4</label>
+					<label for="five" id = "select_5">5</label>
+					<label for="six" id = "select_6">6</label>
+				</div>
+
+				<span class="progress"><span></span></span>
+			</div>
+		</form>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src = "assets/js/script.js"></script>
+	</body>
+</html>
